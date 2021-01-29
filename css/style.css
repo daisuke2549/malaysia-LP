@@ -1,0 +1,495 @@
+body{
+    width:100%;
+    font-size:16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin:0px;
+    padding:0px;
+}
+img{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+h2{
+    font-size:42px;
+    text-align:center;
+}
+h3{
+   font-size:24px;
+}
+.wrap{
+    overflow: hidden;
+}
+
+
+/* ヘッダー要素 */
+
+.header{
+    height:700px;
+    width:100%;
+    padding-top: 0px;
+    background-image: url(../img/travel3.jpeg);
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+.header-left{
+    float:left;
+    margin-left: 20px;
+    margin-top: 20px;
+
+ }
+ .header-left h1{
+    padding-left:10px;
+    color:#fff;
+ }
+ .header-right{
+     text-align: right;
+
+ }
+
+ .header-right nav ul li{
+     display:inline-block;
+     padding:  30px 20px 45px 34px;
+     font-size:18px;
+ }
+
+
+.header-right nav ul li a{
+      color:#fff;
+}
+.header-middle h2{
+    text-align:center;
+    margin-top: 200px;
+    color:#fff;
+    font-size:42px;
+}
+
+
+
+/* ハンバーガーメニュー */
+.global-nav {
+    position: fixed;
+    right: -320px; /* これで隠れる */
+    top: 0;
+    width: 300px; /* スマホに収まるくらい */
+    height: 100vh;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+  .hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index: 300;
+  }
+  .global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .global-nav__item {
+    text-align: center;
+    padding: 0 14px;
+  }
+  .global-nav__item a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #111;
+  }
+  .global-nav__item a:hover {
+    background-color: #eee;
+  }
+  .hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 20px;
+    height: 1px;
+    background-color: red;
+    transition: all .6s;
+  }
+  .hamburger__line--1 {
+    top: 14px;
+  }
+  .hamburger__line--2 {
+    top: 20px;
+  }
+  .hamburger__line--3 {
+    top: 26px;
+  }
+  .black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .6s;
+    cursor: pointer;
+  }
+  /* 表示された時用のCSS */
+  .nav-open .global-nav {
+    right: 0;
+  }
+  .nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+  }
+  .nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+  }
+  .nav-open .hamburger__line--2 {
+    width: 0;
+    left: 50%;
+  }
+  .nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+
+
+  /* ========================================================
+  ページトップに戻るボタン
+  =========================================================*/
+  .scroll-top {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    z-index: 100;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: black;
+    line-height: 50px;
+    text-align: center;
+  }
+  .scroll-top:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+
+
+
+
+
+
+/* about part */
+.about{
+    width:100%;
+}
+.about-title h2{
+
+    margin-top: 100px;
+
+}
+.about-title p{
+    margin:40px;
+    font-size:30px;
+    width:auto;
+}
+
+
+/* sightseeing part */
+.sightseeing{
+   background-color:#FFEFD5;
+   height:1250px;
+   width:100%;
+}
+
+
+.sightseeing-title{
+     padding-top:50px;
+}
+
+.sightseeing-title h2{
+    margin-top: 100px;
+}
+.card-items{
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+
+.card-item{
+   background-color: #fff;
+   width: calc(33.333% - 100px / 3);
+   height:450px;
+   margin:auto;
+   margin-top: 50px;
+}
+
+.card-item p img{
+    margin: 0 0px;
+}
+.card-item  img{
+    width:100%;
+    vertical-align: bottom;
+}
+.card-item  h3{
+    font-size: 20px;
+    margin-top: 26px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .card-item  p{
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+
+
+
+/* food part */
+.food{
+    margin-top: 300px;
+}
+
+.malasia-food-part{
+    background-image: url(../img/nasigoren.jpg);
+    background-size: cover;
+    height:700px;
+    width: 100%;
+    height: 700px;
+    color:#fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: skewY(30deg);
+    -ms-transform: skewY(10deg);
+    transform: skewY(10deg);
+}
+
+
+
+
+
+.malasia-food-list{
+    margin-top: 300px;
+}
+
+
+/* other-entertainment-part */
+.other-entertainment{
+    margin-top: 100px;
+}
+
+.clearfix  img{
+    width:50%;
+}
+
+
+.flex{
+    display: flex;
+    margin-top: 50px;
+}
+.flex img{
+margin-left: 30px;
+transition: 1.5s ;
+}
+.flex img:hover{
+	transform: rotateY(360deg);
+}
+
+
+
+.flex>p{
+    width: 30%;
+}
+.comment-area{
+   margin-left: 50px;
+}
+.comment-area h3{
+    margin-bottom: 15px;
+}
+.comment-area h3:hover{
+    color:red;
+}
+.comment-area p:hover{
+    font-weight: bold;
+}
+
+
+/* footer-part */
+
+#footer{
+
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    color: #FFFFFF;
+}
+
+
+@media screen and (max-width:767px){
+
+/* header-part */
+.header
+
+.header-right{
+    position: relative;
+    left:-1000px;
+}
+.header-left {
+    margin-top: 0px;
+    float: none;
+    text-align:center;
+}
+.header-middle h2{
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size:42px;
+}
+.wrap{
+    overflow: hidden;
+}
+
+
+/* about */
+.about-title{
+   margin-bottom: 10px;
+}
+.about-title p{
+    font-size:16px;
+    width:auto;
+    margin-bottom: 10px;
+}
+
+.sightseeing{
+    background-color:#FFEFD5;
+    height:auto;
+    width:100%;
+ }
+
+
+ .sightseeing-title{
+      padding-top:30px;
+ }
+
+ .sightseeing-title h2{
+     margin-top: 10px;
+ }
+ .card-items{
+    display: block;
+    width:100%;
+}
+.card-item{
+    background-color: #fff;
+    width:100%;
+    height:450px;
+    margin:0p;
+    border:1px solid black;
+    margin-top: 50px;
+ }
+
+ .card-item p img{
+     margin: 0 0px;
+ }
+ .card-item  img{
+     width:100%;
+     vertical-align: bottom;
+ }
+ .card-item  h3{
+     font-size: 20px;
+     margin-top: 26px;
+     margin-left: 20px;
+     margin-bottom: 20px;
+   }
+   .card-item  p{
+     font-size: 16px;
+     margin-left: 20px;
+   }
+
+
+/* food part */
+.food{
+    margin-top: 50px;
+}
+.malasia-food-list{
+    margin-top: 50px;
+}
+
+
+
+/* other*/
+.other{
+    width:100%;
+}
+
+.flex{
+    display: block;
+    margin:auto;
+}
+.flex img{
+margin-left: 0px;
+
+width:100%;
+transition: 1.5s ;
+}
+.flex img:hover{
+	transform: rotateY(360deg);
+}
+.flex p img{
+    width:100%;
+}
+
+.flex>p{
+    width: 100%;
+    margin-left: 0px;
+}
+.comment-area{
+    width:300px;
+    margin-left: 0px;
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
