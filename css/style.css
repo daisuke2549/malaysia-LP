@@ -10,8 +10,14 @@ img{
     margin: 0;
     padding: 0;
 }
-li{
+img:hover{
+    opacity: 0.6;
+}
+
+
+li,ul{
     list-style: none;
+    text-decoration: none;
 }
 
 a{
@@ -35,7 +41,6 @@ h3{
     height:700px;
     width:100%;
     padding-top: 0px;
-    background-image: url(../img/travel3.jpeg);
     background-size: cover;
     background-repeat: repeat-x;
 }
@@ -64,106 +69,30 @@ h3{
 .header-right nav ul li a{
       color:#fff;
 }
-.header-middle h2{
+
+.header-right nav ul li a:hover{
+    color:#FF0000;
+}
+
+
+.header-middle h1{
     text-align:center;
     margin-top: 200px;
     color:#fff;
     font-size:42px;
+    transition:all .3s ease 0s;
+}
+.header-middle h1:hover{
+    transform:scale(1.2);
+
 }
 
-
-
-/* ハンバーガーメニュー */
-.global-nav {
-    position: fixed;
-    right: -320px; /* これで隠れる */
-    top: 0;
-    width: 300px; /* スマホに収まるくらい */
-    height: 100vh;
-    padding-top: 40px;
-    background-color: #fff;
-    transition: all .6s;
-    z-index: 200;
-    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
-  }
-  .hamburger {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
-    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
-    cursor: pointer;
-    z-index: 300;
-  }
-  .global-nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .global-nav__item {
-    text-align: center;
-    padding: 0 14px;
-  }
-  .global-nav__item a {
-    display: block;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    text-decoration: none;
-    color: #111;
-  }
-  .global-nav__item a:hover {
-    background-color: #eee;
-  }
-  .hamburger__line {
-    position: absolute;
-    left: 11px;
-    width: 20px;
-    height: 1px;
-    background-color: red;
-    transition: all .6s;
-  }
-  .hamburger__line--1 {
-    top: 14px;
-  }
-  .hamburger__line--2 {
-    top: 20px;
-  }
-  .hamburger__line--3 {
-    top: 26px;
-  }
-  .black-bg {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    background-color: #000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .6s;
-    cursor: pointer;
-  }
-  /* 表示された時用のCSS */
-  .nav-open .global-nav {
-    right: 0;
-  }
-  .nav-open .black-bg {
-    opacity: .8;
-    visibility: visible;
-  }
-  .nav-open .hamburger__line--1 {
-    transform: rotate(45deg);
-    top: 20px;
-  }
-  .nav-open .hamburger__line--2 {
-    width: 0;
-    left: 50%;
-  }
-  .nav-open .hamburger__line--3 {
-    transform: rotate(-45deg);
-    top: 20px;
-  }
+.header-SP{
+    display: none;
+}
+.gnav{
+    display:none;
+}
 
 
   /* ========================================================
@@ -171,7 +100,7 @@ h3{
   =========================================================*/
   .scroll-top {
     position: fixed;
-    left: 25px;
+    right: 25px;
     bottom: 25px;
     z-index: 100;
     background-color: red;
@@ -190,23 +119,37 @@ h3{
 
 
 
-
-
-
 /* about part */
 .about{
     width:100%;
+    text-align:center;
+    margin-bottom: 50px;
 }
 .about-title h2{
-
     margin-top: 100px;
-
+    font-size:38px;
+    transition:all .3s ease 0s;
+}
+.about-title h2:hover{
+    transform: rotate(25deg);
 }
 .about-title p{
     margin:40px;
     font-size:30px;
     width:auto;
 }
+
+.about-title p img{
+   width:70%;
+}
+.about-capital-city{
+    margin-top: 140px;
+
+}
+.about-capital-city iframe{
+    margin:0 auto;
+}
+
 
 
 /* sightseeing part */
@@ -241,9 +184,11 @@ h3{
 
 .card-item p img{
     margin: 0 0px;
+
 }
 .card-item  img{
     width:100%;
+    height:300px;
     vertical-align: bottom;
 }
 .card-item  h3{
@@ -282,7 +227,13 @@ h3{
     transform: skewY(10deg);
 }
 
-
+.card img{
+    height:300px;
+    width:auto;
+}
+.card-body{
+    height:120px;
+}
 
 
 
@@ -301,25 +252,36 @@ h3{
 }
 
 
-.flex{
+.malaysia-entertainment{
     display: flex;
     margin-top: 50px;
+    margin:0 auto;
+    justify-content: center;
+    max-width: 1200px;
 }
-.flex img{
+.malaysia-entertainment p{
+    margin-right: 20px;
+}
+
+
+.malaysia-entertainment img{
 margin-left: 30px;
 transition: 1.5s ;
 }
-.flex img:hover{
+.malaysia-entertainment img:hover{
 	transform: rotateY(360deg);
 }
 
+.malasia-entertainment-part{
+    margin-bottom: 40px;
+}
 
-
-.flex>p{
+.malaysia-entertainment>p{
     width: 30%;
 }
 .comment-area{
    margin-left: 50px;
+   width:30%;
 }
 .comment-area h3{
     margin-bottom: 15px;
@@ -335,45 +297,159 @@ transition: 1.5s ;
 /* footer-part */
 
 #footer{
-
     width: 100%;
-    height: 100px;
+    height: auto;
     background-color: #000000;
     margin: 0 auto;
     margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .copyright{
     color: #FFFFFF;
 }
+.footer-nav-list{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.footer-nav-list nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav-list nav ul li a{
+    color: #FFFFFF;
+}
+
+.footer-nav-list nav ul li a{
+      padding:10px;
+}
+.footer-SNS-list{
+    text-align:center;
+    color:#fff;
+    margin-bottom: 20px;
+}
+.footer-SNS-list li{
+    display: inline;
+    padding:20px;
+}
+
+
+
+.footer-copyright{
+    text-align: center;
+}
+
 
 
 @media screen and (max-width:767px){
 
 /* header-part */
-.header
+.header{
+    height:300px;
+}
 
 .header-right{
-    position: relative;
-    left:-1000px;
+    display: none;
 }
+
 .header-left {
     margin-top: 0px;
-    float: none;
+    display: none;
     text-align:center;
 }
-.header-middle h2{
+.header-middle h1{
     text-align:center;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    font-size:42px;
+    margin-top: -100px;
+    font-size:24px;
 }
 .wrap{
     overflow: hidden;
 }
+
+.header-SP{
+    text-align:center;
+    padding-left:10px;
+    color:#fff;
+    display:block;
+}
+
+
+/* ドロワーメニュー */
+/*menu*/
+.menu{
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    z-index: 99;
+}
+.menu__line{
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: absolute;
+    transition:transform .3s;
+    width: 100%;
+}
+.menu__line--center{
+    top: 9px;
+}
+.menu__line--bottom{
+    bottom: 0;
+}
+.menu__line--top.active{
+    top: 8px;
+    transform: rotate(45deg);
+}
+.menu__line--center.active{
+    transform:scaleX(0);
+}
+.menu__line--bottom.active{
+    bottom: 10px;
+    transform: rotate(135deg);
+}
+
+.gnav{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+.gnav__wrap{
+    align-items:center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.gnav__menu__item{
+    margin: 40px 0;
+}
+.gnav__menu__item a{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+    text-decoration: none;
+    transition: .5s;
+}
+.gnav__menu__item a:hover{
+    color: #666;
+}
+
+
+.hero{
+    background:url(images/hero.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 100vh;
+}
+
 
 
 /* about */
@@ -385,6 +461,11 @@ transition: 1.5s ;
     width:auto;
     margin-bottom: 10px;
 }
+
+.about-capital-city iframe{
+    width:100%;
+}
+
 
 .sightseeing{
     background-color:#FFEFD5;
@@ -447,24 +528,24 @@ transition: 1.5s ;
     width:100%;
 }
 
-.flex{
+.malaysia-entertainment{
     display: block;
     margin:auto;
 }
-.flex img{
+.malaysia-entertainment img{
 margin-left: 0px;
 
 width:100%;
 transition: 1.5s ;
 }
-.flex img:hover{
+.malaysia-entertainment img:hover{
 	transform: rotateY(360deg);
 }
-.flex p img{
+.malaysia-entertainment p img{
     width:100%;
 }
 
-.flex>p{
+.malaysia-entertainment>p{
     width: 100%;
     margin-left: 0px;
 }
@@ -478,8 +559,14 @@ transition: 1.5s ;
 
 
 
+.footer-nav-list{
+    display: none
+}
 
+.footer-SNS-list{
+    padding-top: 30px;
 
+}
 
 
 
